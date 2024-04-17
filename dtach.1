@@ -172,6 +172,14 @@ will suspend itself when the suspend key is pressed. With this option, the
 suspend character is sent to the session instead of being handled by
 .BR dtach .
 
+.TP
+.B \-C
+Prevents dtach from clearing screen on attach.
+Normally,
+.B dtach
+will clear the screen whenever it attaches to a session. With this option,
+the screen is not cleared when it attaches to a session.
+
 .PP
 .SH EXAMPLES
 

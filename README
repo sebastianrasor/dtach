@@ -127,6 +127,9 @@ method is used as the default redraw method for the session.
 
 6. CHANGES
 
+The changes in version 0.10 are:
+- Added -C, an option which will prevent the screen from being cleared. 
+
 The changes in version 0.9 are:
 - Added AIX support.
 - Added dtach -N, a mode similar to dtach -n, except dtach will stay in the

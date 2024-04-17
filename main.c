@@ -34,6 +34,8 @@ char *sockname;
 int detach_char = '\\' - 64;
 /* 1 if we should not interpret the suspend character. */
 int no_suspend;
+/* 1 if we should not clear the console on attach. */
+int no_clear;
 /* The default redraw method. Initially set to unspecified. */
 int redraw_method = REDRAW_UNSPEC;
 
@@ -78,6 +80,7 @@ usage()
 		"\t\t   ctrl_l: Send a Ctrl L character to the program.\n"
 		"\t\t    winch: Send a WINCH signal to the program.\n"
 		"  -z\t\tDisable processing of the suspend key.\n"
+		"  -C\t\tDisable clearing the screen.\n"
 		"\nReport any bugs to <" PACKAGE_BUGREPORT ">.\n",
 		PACKAGE_VERSION, __DATE__, __TIME__);
 	exit(0);
@@ -158,6 +161,8 @@ main(int argc, char **argv)
 				detach_char = -1;
 			else if (*p == 'z')
 				no_suspend = 1;
+			else if (*p == 'C')
+				no_clear = 1;
 			else if (*p == 'e')
 			{
 				++argv; --argc;

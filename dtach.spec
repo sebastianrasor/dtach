@@ -43,6 +43,9 @@ rm -rf $RPM_BUILD_DIR/%{name}-%{version}
 %{_mandir}/*/*
 
 %changelog
+* Wed Apr 17 2024 Sebastian Rasor <https://www.sebastianrasor.com/contact> 0.10
+- New release
+
 * Sun May 8 2016 Ned T. Crigler <crigler@users.sourceforge.net> 0.9
 - New release
 
